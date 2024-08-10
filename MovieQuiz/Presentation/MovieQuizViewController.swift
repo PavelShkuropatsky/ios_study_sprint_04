@@ -33,12 +33,18 @@ final class MovieQuizViewController: UIViewController {
     /// Обрабатывает результат ответа
     /// - Parameter isCorrect: правилен ли ответ
     private func proceedAnswerResult(isCorrect: Bool) {
+        noButton.isEnabled = false
+        yesButton.isEnabled = false
+        
         if isCorrect { quiz.correctAnswersCount += 1 }
         
         showAnswerResultOnImage(isCorrect: isCorrect)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.showNextQuestionOrResults()
+            
+            self.noButton.isEnabled = true
+            self.yesButton.isEnabled = true
         }
     }
     
