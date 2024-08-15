@@ -60,12 +60,12 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-4x-F2u" userLabel="Question Label">
-                                        <rect key="frame" x="26.333333333333343" y="528.66666666666663" width="282.33333333333326" height="89.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="528.66666666666663" width="335" height="89.333333333333371"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Рейтинг этого фильма меньше чем 5?">
                                                 <attributes>
                                                     <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="26" name="YSDisplay-Bold"/>
+                                                    <font key="NSFont" size="23" name="YSDisplay-Bold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
