@@ -33,8 +33,7 @@ final class MovieQuizViewController: UIViewController {
     /// Обрабатывает результат ответа
     /// - Parameter isCorrect: правилен ли ответ
     private func proceedAnswerResult(isCorrect: Bool) {
-        noButton.isEnabled = false
-        yesButton.isEnabled = false
+        isEnabledButtons(false)
         
         if isCorrect { quiz.correctAnswersCount += 1 }
         
@@ -43,9 +42,16 @@ final class MovieQuizViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.showNextQuestionOrResults()
             
-            self.noButton.isEnabled = true
-            self.yesButton.isEnabled = true
+            self.isEnabledButtons(true)
         }
+    }
+    
+    /// Изменяет доступность кнопок
+    /// - недоступно - на время перехода между состояниями игры
+    /// - доступно - после завершения перехода
+    private func isEnabledButtons(_ value : Bool) {
+        noButton.isEnabled = value
+        yesButton.isEnabled = value
     }
     
     /// Отображает рамку вокруг постера фильма при получении ответа на вопрос
