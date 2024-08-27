@@ -157,6 +157,7 @@
                         <outlet property="filmImage" destination="ruo-20-MV1" id="vKW-Fq-jxW"/>
                         <outlet property="noButton" destination="rWw-EW-fVn" id="I5l-vN-VtI"/>
                         <outlet property="questionLabel" destination="Ja6-4x-F2u" id="uzr-WV-0mG"/>
+                        <outlet property="questionTitleLabel" destination="wqf-Dj-fUt" id="4ke-8n-TID"/>
                         <outlet property="quizProgressLabel" destination="sDS-gI-2rN" id="LUF-nt-Ol5"/>
                         <outlet property="yesButton" destination="EV1-FT-ScF" id="gQB-dB-1OQ"/>
                     </connections>

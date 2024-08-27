@@ -5,6 +5,7 @@ final class MovieQuizViewController: UIViewController {
     /// Информация об игре
     private var quiz = Quiz()
     
+    @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet private weak var quizProgressLabel: UILabel!
     @IBOutlet private weak var filmImage: UIImageView!
     @IBOutlet private weak var questionLabel: UILabel!
@@ -15,7 +16,31 @@ final class MovieQuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateFonts()
         showCurrentStep()
+    }
+    
+    /// Устанавливает шрифты для надписей
+    private func updateFonts() {
+        if let questionTitleLabel {
+            questionTitleLabel.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        }
+        
+        if let quizProgressLabel {
+            quizProgressLabel.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        }
+        
+        if let questionLabel {
+            questionLabel.font = UIFont(name: "YSDisplay-Bold", size: 23)
+        }
+        
+        if let noButton {
+            noButton.titleLabel?.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        }
+            
+        if let yesButton {
+            yesButton.titleLabel?.font = UIFont(name: "YSDisplay-Medium", size: 20)
+        }
     }
     
     /// Выводит в интерфейс данные шага игры
